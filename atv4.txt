@@ -6,7 +6,7 @@ BEGIN
     SET vtotal_item = NEW.n_vlvenda * NEW.n_qvenda;
 	UPDATE comivenda SET n_totavenda = vtotal_itens - vtotal_item
 	WHERE n_numevenda = NEW.n_numevenda;
-END //
+END $$
 
     DECLARE vtotal_itens FLOAT(10,2) DEFAULT 0;
 	DECLARE vtotal_item FLOAT(10,2) DEFAULT 0;
